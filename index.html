@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="vue.css">
+  <nav>
+      <a href="https://pd.qq.com/s/a3nud437a">植物大战僵尸资源分享</a>
+  </nav>
+  <div id="app"></div>
+  <link 
+    rel="stylesheet"
+    href="style.min.css"
+    title="docsify-darklight-theme"
+    type="text/css"
+  />
+</head>
+<body>
+  <div id="app"></div>
+   <script>
+    window.$docsify = {
+      search: {
+        paths: 'auto',
+        placeholder: '搜索',
+        noData: '找不到结果',
+        depth: 3,
+      },
+    }
+  </script>
+  <script>
+    function move() {
+     document.getElementsByClassName('sidebar')[0].setAttribute('id', 'sidebar-full')
+      document.getElementById('sidebar-full').appendChild(document.getElementById('docsify-darklight-theme'))
+      var button = document.getElementById('docsify-darklight-theme')
+      button.style.position = 'fixed'
+      button.style.left = '10px'
+      button.style.bottom = 'auto'
+      button.style.top = '15px'
+      button.style.width = '24px'
+      button.style.height = '24px'
+    }
+
+    var refreshId = setInterval(function () {
+      if (null != document.getElementById('docsify-darklight-theme')) {
+      move();
+       clearInterval(refreshId);
+      }
+    }, 100);p
+  </script>
+  <script>
+    window.$docsify = {
+     // 加载 _sidebar.md
+      loadSidebar: true
+    };
+  </script>
+  <script>
+  window.$docsify = {
+    name: '',
+    loadSidebar: true,
+    subMaxLevel:4
+  }
+  </script>
+  <!-- Docsify v4 -->
+  <script src="search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <script src="theme.js"></script>
+</body>
+</html>
